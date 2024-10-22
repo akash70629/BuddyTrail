@@ -19,7 +19,7 @@ function renderStats(repoStats, contributorsCount) {
   const statsGrid = document.getElementById('statsGrid');
   const stats = [
       { label: 'Contributors', value: contributorsCount, icon: 'users' },
-      { label: 'Total Contributions', value: repoStats.contributors?.reduce((sum, contributor) => sum + contributor.contributions, 0) || 0, icon: 'git-commit' },
+      { label: 'Total Contributions', value: contributors.reduce((sum, contributor) => sum + contributor.contributions, 0) || 0, icon: 'git-commit' },
       { label: 'GitHub Stars', value: repoStats.stargazers_count || 0, icon: 'star' },
       { label: 'Forks', value: repoStats.forks_count || 0, icon: 'git-branch' }
   ];
